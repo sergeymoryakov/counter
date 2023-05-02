@@ -36,6 +36,11 @@ button {
     border-radius: 20px;
 }
 
+.reset {
+    background-color: #D45366;
+    border: 1px solid #D45366;
+}
+
 @media (max-width: 576px) {
     h1,
     p,
