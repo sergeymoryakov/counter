@@ -1,11 +1,15 @@
 body {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: aquamarine;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    color: white;
     background-color: black;
 }
 
 h1,
-p {
+p,
+button {
+    font-size: 32px;
+    line-height: 44px;
     display: block;
     text-align: center;
 }
@@ -14,22 +18,20 @@ p {
     margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 36px;
     width: fit-content;
     height: fit-content;
 }
 
 .display {
     font-size: 50px;
-    color: red;
+    color: #4191FF;
 }
 
 button {
-    padding: 20px 40px;
-    font-size: 32px;
-    line-height: 40px;
+    padding: 30px 165px;
     color: white;
-    background-color: green;
-    border: 1px solid green;
-    border-radius: 5px;
+    background-color: #4191FF;
+    border: 1px solid #4191FF;
+    border-radius: 20px;
 }
