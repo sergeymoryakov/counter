@@ -35,3 +35,20 @@ button {
     border: 1px solid #4191FF;
     border-radius: 20px;
 }
+
+@media (max-width: 576px) {
+    h1,
+    p,
+    button {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    
+    button {
+        width: 100%;
+        padding: 20px 100px;
+        border-radius: 10px;
+    }
+
+
+}
