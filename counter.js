@@ -1,41 +1,47 @@
 let displayCount = document.querySelector('[data-element="displayValue"]');
-let addOne = document.querySelector("#addOneButton");
-let addTwo = document.querySelector("#addTwoButton");
-let deductOne = document.querySelector("#deductOneButton");
-let deductTwo = document.querySelector("#deductTwoButton");
-let reset = document.querySelector("#resetButton");
+const addOne = document.querySelector("#addOneButton");
+const addTwo = document.querySelector("#addTwoButton");
+const deductOne = document.querySelector("#deductOneButton");
+const deductTwo = document.querySelector("#deductTwoButton");
+const reset = document.querySelector("#resetButton");
 
+// data-attributes example
 console.log(displayCount.dataset);
+console.log(addOne.dataset);
+console.log(addTwo.dataset);
 
-let counter = 0;
+const COUNTER_INIT_VALUE = 0;
+let counter = COUNTER_INIT_VALUE;
+displayCount.innerText = counter;
 
 addOne.addEventListener('click', function() {
-    counter = counter + 1;
+    counter = counter + parseInt(addOne.dataset.button);
     displayCount.innerText = counter;
     console.log(counter);
 });
 
 addTwo.addEventListener('click', function() {
-    counter = counter + 2;
+    counter = counter + parseInt(addTwo.dataset.button);
     displayCount.innerText = counter;
     console.log(counter);
 });
 
 deductOne.addEventListener('click', function() {
-    counter = counter - 1;
+    counter = counter - parseInt(addOne.dataset.button);
     displayCount.innerText = counter;
     console.log(counter);
 });
 
 deductTwo.addEventListener('click', function() {
-    counter = counter - 2;
+    counter = counter - parseInt(addTwo.dataset.button);
     displayCount.innerText = counter;
     console.log(counter);
 });
 
 reset.addEventListener('click', function() {
-    counter = 0;
+    counter = COUNTER_INIT_VALUE;
     displayCount.innerText = counter;
+    console.log(counter);
 });
 
 // console.log(document);
