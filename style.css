@@ -8,10 +8,22 @@ body {
 h1,
 p,
 button {
+    font-family: inherit;
+    font-weight: inherit;
     font-size: 32px;
     line-height: 44px;
     display: block;
     text-align: center;
+}
+
+
+@media (max-width: 576px) {
+    h1,
+    p,
+    button {
+        font-size: 25px;
+        line-height: 30px;
+    }
 }
 
 .container {
@@ -24,11 +36,14 @@ button {
 }
 
 .display {
+    padding: 30px 165px;
     font-size: 50px;
     color: #4191FF;
+    border: 1px solid #4191FF;
+    border-radius: 20px;
 }
 
-button {
+.standard {
     padding: 30px 165px;
     color: white;
     background-color: #4191FF;
@@ -38,28 +53,26 @@ button {
 }
 
 .reset {
+    padding: 30px 165px;
+    color: white;
     background-color: #D45366;
     border: 1px solid #D45366;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
-button:hover {
+.standard:hover,
+.reset:hover {
     opacity: 0.8;
     border-color: white;
 }
 
 @media (max-width: 576px) {
-    h1,
-    p,
-    button {
-        font-size: 25px;
-        line-height: 30px;
-    }
-    
-    button {
+    .display,
+    .standard,
+    .reset {
         width: 100%;
         padding: 20px 100px;
         border-radius: 10px;
     }
-
-
 }

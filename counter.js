@@ -1,19 +1,36 @@
-let add = document.querySelector('.add');
-let deduct = document.querySelector('.deduct');
-let reset = document.querySelector('.reset');
-let display = document.querySelector('.display');
+let displayCount = document.querySelector('[data-element="displayValue"]');
+let addOne= document.querySelector("addOneButton");
+let addTwo= document.querySelector("addTwoButton");
+let deductOne = document.querySelector("deductOneButton");
+let deductTwo = document.querySelector("deductTwoButton");
+let reset = document.querySelector("resetButton");
+
+console.log(displayCount.dataset);
 
 let counter = 0;
 
-add.addEventListener('click', function() {
+addOne.addEventListener('click', function() {
     counter = counter + 1;
-    display.innerText = counter;
-    // console.log(counter);
+    displayCount.innerText = counter;
+    console.log(counter);
 });
 
-deduct.addEventListener('click', function() {
+addTwo.addEventListener('click', function() {
+    counter = counter + 2;
+    displayCount.innerText = counter;
+    console.log(counter);
+});
+
+deductOne.addEventListener('click', function() {
     counter = counter - 1;
-    display.innerText = counter;
+    displayCount.innerText = counter;
+    console.log(counter);
+});
+
+deductTwo.addEventListener('click', function() {
+    counter = counter - 2;
+    displayCount.innerText = counter;
+    console.log(counter);
 });
 
 reset.addEventListener('click', function() {
